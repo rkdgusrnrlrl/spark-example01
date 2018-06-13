@@ -1,17 +1,26 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'java'
+apply plugin: 'application'
 
 group 'me.dakbutfly'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
+mainClassName = "me.dakbutfly.spark_api.Application"
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.0'
+
+    // json
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.5'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.9.5'
+
+    // webframwework
     compile "com.sparkjava:spark-core:2.7.2"
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    testCompile 'junit:junit:4.12'
 }
