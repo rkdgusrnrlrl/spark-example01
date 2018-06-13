@@ -1,6 +1,7 @@
 package me.dakbutfly.spark_api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import me.dakbutfly.spark_api.models.ApiCaller;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -10,8 +11,10 @@ import static spark.Spark.post;
 
 public class Application {
 
+    public static ArrayList<ApiCaller> apiCallerList = new ArrayList<>();
+
     public static void main(String[] args) {
-        ArrayList<ApiCaller> apiCallerList = new ArrayList<>();
+
 
         post("/api-callers", "application/json", (req, res) -> {
             // json body to map

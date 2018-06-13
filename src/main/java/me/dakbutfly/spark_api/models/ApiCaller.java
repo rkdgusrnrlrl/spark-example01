@@ -1,4 +1,4 @@
-package me.dakbutfly.spark_api;
+package me.dakbutfly.spark_api.models;
 
 import lombok.Builder;
 import lombok.Data;
